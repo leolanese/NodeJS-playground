@@ -11,29 +11,33 @@ NodeJS is primarily used for non-blocking, event-driven servers, due to its sing
 0) 
 ```js
 static/node app.js
+static/node app2.js
 
 // running app, no need for server
 // Application started and Listening on port 3000
 ```
 
+
 ---
 
-1) With mock json data
+1) Zero-Dependency Service Mock
+
+Our project folder should now contain the following:
 
 ```js
-node server.js
-```
+/server.js
+/static/
+   app.js
+   index.html
+```       
 
-
----
-
-2) fetching API data from `http://localhost:3000`
+-> fetching API data from `http://localhost:3000`
 
 Now let's open two terminal windows, both with the current working directory set to our project folder:
 
 ```js
 // in the 1st terminal
-node server2.js
+node-test/node server.js
 
 [
     {id: '1', name: 'Leo Lanese', rrp: '1', info: 'Coding all day'},
@@ -44,7 +48,7 @@ node server2.js
 
 ```js
 // In the 2nd terminal window
-serve -p 5050 static
+node-test/serve -p 5050 static2
 
    ┌───────────────────────────────────────────┐
    │                                           │

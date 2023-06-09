@@ -1,19 +1,16 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const app = express();
+'use strict'
+const { createServer } = require('http')
 
-app.listen(3000, () => {
-  console.log("Application started and Listening on port 3000");
-});
+const data = JSON.stringify([
+  {id: '1', name: 'Leo Lanese', rrp: '1', info: 'Coding all day'},
+  {id: '2', name: 'Tom', rrp: '2', info: 'Fighting with Sam'},
+  {id: '3', name: 'Sam', rrp: '3', info: 'Fighting with Tom'}
+])
 
-// get our app to use body parser 
-app.use(bodyParser.urlencoded({ extended: true }))
+const server = createServer((req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Content-Type', 'application/json')
+  res.end(data)
+})
 
-// To load the static server files included in the index.html use express.static
-// serve your css as static
-app.use(express.static(__dirname + "/static/"));
-
-
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/static/index.html");
-});
+server.listen(3000)
