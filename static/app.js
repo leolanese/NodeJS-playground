@@ -1,33 +1,33 @@
-const populateProducts = async () => {
-  const products = document.querySelector('#products');
-  products.innerHTML = '';
-  
-  const data = [
-    {id: '1', name: 'Leo Lanese', rrp: '1', info: 'Coding all day'},
-    {id: '2', name: 'Tom', rrp: '2', info: 'Fighting with Sam'},
-    {id: '3', name: 'Sam', rrp: '3', info: 'Fighting with Tom'}
-  ]
-  
-  for (const product of data) {
-    const item = document.createElement('product-item')
-    for (const key of ['name', 'rrp', 'info']) {
-      const span = document.createElement('span')
-      span.slot = key
-      span.textContent = product[key]
-      item.appendChild(span)
-    }
-    products.appendChild(item)
-  }
-}
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
 
-document.querySelector('#fetch').addEventListener('click', async () => {
-  await populateProducts()
-})
+app.listen(3000, () => {
+  console.log("Application started and Listening on port 3000");
+});
 
-customElements.define('product-item', class Item extends HTMLElement {
-  constructor() {
-    super()
-    const itemTmpl = document.querySelector('#item').content
-    this.attachShadow({mode: 'open'}).appendChild(itemTmpl.cloneNode(true))
-  }
-})
+// serve your css as static
+app.use(express.static(__dirname + '/static/'));
+
+app.get("/dirname", (req, res) => {
+  // server console
+  console.log(__dirname)
+});
+
+app.get("/response", (req, res) => {
+  res.send("<html> <head>server Response</head><body><h1> This page was render direcly from the server <p>Hello there welcome to my website</p></h1></body></html>");
+});
+
+// index
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
+
+// get our app to use body parser 
+app.use(bodyParser.urlencoded({ extended: true }))
+
+app.post("/", (req, res) => {
+  var subName = req.body.yourname
+  var subEmail = req.body.youremail;
+ res.send("Hello " + subName + ", Thank you for subcribing. You email is " + subEmail);
+});

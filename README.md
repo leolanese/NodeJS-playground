@@ -8,6 +8,15 @@
 
 NodeJS is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It's used for traditional web sites and back-end API services, but was designed with real-time, push-based architectures in mind.
 
+0) 
+```js
+static/node app.js
+
+// running app, no need for server
+// Application started and Listening on port 3000
+```
+
+---
 
 1) With mock json data
 
