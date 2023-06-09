@@ -8,6 +8,16 @@
 
 NodeJS is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It's used for traditional web sites and back-end API services, but was designed with real-time, push-based architectures in mind.
 
+
+### Scrips
+
+```js
+/scripts/node <script-name>
+```
+
+
+### Full-Stack-JavaScript
+
 0) 
 ```js
 static/node app.js
