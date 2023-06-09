@@ -20,10 +20,10 @@ node server.js
 
 2) fetching API data from `http://localhost:3000`
 
-Now let's open two terminal windows, both with the current working directory set to our project folder. In the first terminal window, we'll start our server like so:
+Now let's open two terminal windows, both with the current working directory set to our project folder:
 
 ```js
-// in the forst terminal
+// in the 1st terminal
 node server2.js
 
 [
@@ -34,7 +34,7 @@ node server2.js
 ```
 
 ```js
-// In the second terminal window
+// In the 2nd terminal window
 serve -p 5050 static
 
    ┌───────────────────────────────────────────┐
