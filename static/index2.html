@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./app.css">
+
+  <script type="module" src="./app2.js"></script>
+  
+  <link rel="stylesheet"
+  href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
+  <title>html form</title>
+</head>
+<body>
+<div class="subscribe-container">
+  <form method="POST">
+    <input type="email" name="youremail" placeholder="Email Address" required>
+    <input type="text" name="yourname" placeholder="Name" required>
+    <input class="subscribe-button" type="submit" value="Subscribe">
+  </form>
+</div>
+
+<nav><button id="fetch">Fetch Products</button></nav>
+<hr>
+<div id="products"></div>
+<template id="item">
+  <style>
+    details { font-size: 1.5em; }
+    summary { cursor: pointer; }
+    p { text-indent: 1.5rem; }
+  </style>
+   <details>
+    <summary>
+      <strong><slot name="name"></slot></strong> - <em><slot name="rrp"></slot></em>
+    </summary>
+    <p><slot name="info"></slot></p>
+  </details>
+</template>
+
+</body>
+</html>
