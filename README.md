@@ -26,7 +26,11 @@ Now let's open two terminal windows, both with the current working directory set
 // in the forst terminal
 node server2.js
 
-[{"id":"A1","name":"Vacuum Cleaner","rrp":"99.99","info":"The suckiest vacuum in the world."},{"id":"A2","name":"Leaf Blower","rrp":"303.33","info":"This product will blow your socks off."},{"id":"B1","name":"Chocolate Bar","rrp":"22.40","info":"Delicious overpriced chocolate."}]
+[
+    {id: '1', name: 'Leo Lanese', rrp: '1', info: 'Coding all day'},
+    {id: '2', name: 'Tom', rrp: '2', info: 'Fighting with Sam'},
+    {id: '3', name: 'Sam', rrp: '3', info: 'Fighting with Tom'}
+]
 ```
 
 ```js

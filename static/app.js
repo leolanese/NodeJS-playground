@@ -3,9 +3,9 @@ const populateProducts = async () => {
   products.innerHTML = '';
   
   const data = [
-    {id: 'A1', name: 'Vacuum Cleaner', rrp: '99.99', info: 'The suckiest vacuum in the world.'},
-    {id: 'A2', name: 'Leaf Blower', rrp: '303.33', info: 'This product will blow your socks off.'},
-    {id: 'B1', name: 'Chocolate Bar', rrp: '22.40', info: 'Delicious overpriced chocolate.'}
+    {id: '1', name: 'Leo Lanese', rrp: '1', info: 'Coding all day'},
+    {id: '2', name: 'Tom', rrp: '2', info: 'Fighting with Sam'},
+    {id: '3', name: 'Sam', rrp: '3', info: 'Fighting with Tom'}
   ]
   
   for (const product of data) {
