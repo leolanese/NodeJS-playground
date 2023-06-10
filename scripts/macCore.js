@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 
-exec('sw_vers', (err, stdout, stderr) => {
+exec('sysctl -n machdep.cpu.brand_string', (err, stdout, stderr) => {
     if (err) {
         // There was an error!
         console.error(err);

@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 
-exec('sw_vers', (err, stdout, stderr) => {
+exec('networksetup -listallhardwareports', (err, stdout, stderr) => {
     if (err) {
         // There was an error!
         console.error(err);
