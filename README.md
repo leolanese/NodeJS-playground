@@ -86,6 +86,7 @@ node -e "fs.unlinkSync('server.js')"
 // static3
 node -e "fs.mkdirSync('mock-server')"
 cd mock-server
+npm init fastify
 ```
 
 Now, We're going to generate a Fastify service. Fastify is a highly efficient, lightweight web framework for Node.js. It is designed to be as fast as possible while still providing a robust set of features and an easy-to-use, developer-friendly API.
