@@ -9,7 +9,11 @@
 NodeJS is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It's used for traditional web sites and back-end API services, but was designed with real-time, push-based architectures in mind.
 
 
-### Scrips
+> This NodeJS playground is divided into 3 main uses of NodeJS: `Scripts`, `Mocking HTTP Services`, `WebSockets`
+
+---
+
+### Scripts
 
 ```js
 /scripts/node <script-name>
@@ -27,8 +31,9 @@ static/node app2.js
 // Application started and Listening on port 3000
 ```
 
-
 ---
+
+## Mocking HTTP services
 
 2) Zero-Dependency Service Mock
 
@@ -74,7 +79,7 @@ node-test/serve -p 5050 static2
 
 ---
 
-## Mocking GET Routes
+## Mocking GET/POST Routes
 
 ```js
 // removing server.js
@@ -176,4 +181,7 @@ node-test/static3/mock-server/npm run dev
 
 ## Conclusion:
 
-The first GET is when we first selected "Option1" from the category selector. The OPTIONS request is triggered by the native fetch function before performing a POST request which happens directly after. The second GET request is after a page refresh and re-select of the "Option2" category.
+The first `GET` is when we first selected "Option1" from the category selector. The OPTIONS request is triggered by the native fetch function before performing a `POST` request which happens directly after. The second `GET` request is after a page refresh and re-select of the "Option2" category.
+
+---
+
