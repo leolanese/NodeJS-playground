@@ -87,3 +87,15 @@ node -e "fs.unlinkSync('server.js')"
 node -e "fs.mkdirSync('mock-server')"
 cd mock-server
 ```
+
+Now, We're going to generate a Fastify service. Fastify is a highly efficient, lightweight web framework for Node.js. It is designed to be as fast as possible while still providing a robust set of features and an easy-to-use, developer-friendly API.
+
+why using Fastify?
+
+- Performance: Fastify is designed for high performance. It has a minimalistic, lightweight design that aims to be as efficient as possible. It is often touted as one of the fastest web frameworks available for Node.js.
+
+- Typescript Support: Fastify has good support for TypeScript, which can be a key factor for teams that prefer static typing for improved code reliability and developer productivity.
+
+- Schema-Based: Fastify uses JSON Schema for validating routes and serializing outputs. This reduces overhead, increases the efficiency of your applications, and provides automated documentation.
+
+Extendability: Fastify's robust and flexible plugin architecture allows developers to extend its core functionalities as per their requirements. This provides a combination of a lightweight core with the potential to scale up complexity when necessary.
