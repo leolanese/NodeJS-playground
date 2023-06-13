@@ -9,7 +9,7 @@
 NodeJS is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It's used for traditional web sites and back-end API services, but was designed with real-time, push-based architectures in mind.
 
 
-> This NodeJS playground is divided into 3 main uses of NodeJS: `Scripts`, `Mocking HTTP Services`, `WebSockets`
+> This NodeJS playground is divided into 3 main uses of NodeJS: `Scripts`, `Mocking HTTP Services`
 
 ---
 
@@ -185,27 +185,3 @@ The first `GET` is when we first selected "Option1" from the category selector. 
 
 ---
 
-## HTTP Server with WebSockets
-
-> WebSockets enable bidirectional communication between servers and browsers. Similar to how HTTP is structured on the TCP protocol, WebSockets are also structured on HTTP. This enables sustained connections that commence as standard HTTP connections and later evolve into a connection resembling a socket.
-
-```js
-node -e "fs.mkdirSync('websocket')"
-cd websockets
-npm install fastify-websocket@3
-```
-
-```js
-// websocket
-node -e "fs.mkdirSync('mock-server')"
-cd mock-server
-npm init fastify
-npm i
-npm i @fastify/cors
-```
-
-```js
-cd mock-server
-cd routes
-node -e "fs.mkdirSync('orders')"
-```
