@@ -9,7 +9,7 @@
 NodeJS is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It's used for traditional web sites and back-end API services, but was designed with real-time, push-based architectures in mind.
 
 
-> This NodeJS playground is divided into 3 main uses of NodeJS: `Scripts`, `Mocking HTTP Services`
+> This NodeJS playground is divided into 3 main uses of NodeJS: `Scripts`, `Mocking HTTP Services`, `WebSockets`
 
 ---
 
@@ -182,6 +182,4 @@ node-test/static3/mock-server/npm run dev
 ### Conclusion:
 
 The first `GET` is when we first selected "Option1" from the category selector. The OPTIONS request is triggered by the native fetch function before performing a `POST` request which happens directly after. The second `GET` request is after a page refresh and re-select of the "Option2" category.
-
----
 
