@@ -46,7 +46,7 @@ Our project folder should now contain the following:
 Now let's open two terminal windows, both with the current working directory set to our project folder:
 
 ```js
-// in the 1st terminal
+// 1 terminal
 > node-test/node server.js
 
 [
@@ -57,7 +57,7 @@ Now let's open two terminal windows, both with the current working directory set
 ```
 
 ```js
-// In the 2nd terminal window
+// 2 terminal window
 node-test/serve -p 5050 static2
 
    ┌───────────────────────────────────────────┐
@@ -82,12 +82,7 @@ node -e "fs.unlinkSync('server.js')"
 ```
 
 
-```js
-// static3
-node -e "fs.mkdirSync('mock-server')"
-cd mock-server
-npm init fastify
-```
+### Fastify Service
 
 Now, We're going to generate a Fastify service. Fastify is a highly efficient, lightweight web framework for Node.js. It is designed to be as fast as possible while still providing a robust set of features and an easy-to-use, developer-friendly API.
 
@@ -100,3 +95,19 @@ why using Fastify?
 - Schema-Based: Fastify uses JSON Schema for validating routes and serializing outputs. This reduces overhead, increases the efficiency of your applications, and provides automated documentation.
 
 Extendability: Fastify's robust and flexible plugin architecture allows developers to extend its core functionalities as per their requirements. This provides a combination of a lightweight core with the potential to scale up complexity when necessary.
+
+```js
+// static3
+node -e "fs.mkdirSync('mock-server')"
+cd mock-server
+npm init fastify
+npm i
+npm i fastify-cors
+```
+
+
+```js
+// 1 terminal window
+node-test/static3/serve -p 5050
+```
+
