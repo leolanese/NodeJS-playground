@@ -179,9 +179,33 @@ node-test/static3/mock-server/npm run dev
 [13:30:06.892] INFO (17231): request completed
 ```
 
-## Conclusion:
+### Conclusion:
 
 The first `GET` is when we first selected "Option1" from the category selector. The OPTIONS request is triggered by the native fetch function before performing a `POST` request which happens directly after. The second `GET` request is after a page refresh and re-select of the "Option2" category.
 
 ---
 
+## HTTP Server with WebSockets
+
+> WebSockets enable bidirectional communication between servers and browsers. Similar to how HTTP is structured on the TCP protocol, WebSockets are also structured on HTTP. This enables sustained connections that commence as standard HTTP connections and later evolve into a connection resembling a socket.
+
+```js
+node -e "fs.mkdirSync('websocket')"
+cd websockets
+npm install fastify-websocket@3
+```
+
+```js
+// websocket
+node -e "fs.mkdirSync('mock-server')"
+cd mock-server
+npm init fastify
+npm i
+npm i @fastify/cors
+```
+
+```js
+cd mock-server
+cd routes
+node -e "fs.mkdirSync('orders')"
+```
