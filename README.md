@@ -57,7 +57,7 @@ Now let's open two terminal windows, both with the current working directory set
 ```
 
 ```js
-// 2 terminal window
+// 2 terminal
 node-test/serve -p 5050 static2
 
    ┌───────────────────────────────────────────┐
@@ -160,4 +160,16 @@ node-test/static3/serve -p 5050
 ```js
 // 2 terminal
 node-test/static3/mock-server/npm run dev
+
+
+[13:30:06.891] INFO (17231): incoming request
+    reqId: "req-2"
+    req: {
+      "method": "GET",
+      "url": "/routes1",
+      "hostname": "localhost:3000",
+      "remoteAddress": "::1",
+      "remotePort": 53204
+    }
+[13:30:06.892] INFO (17231): request completed
 ```
