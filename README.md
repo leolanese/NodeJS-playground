@@ -105,6 +105,14 @@ npm i
 npm i fastify-cors
 ```
 
+Finally, we'll create the two routes. To create a route we can create a folder with an `index.js` file inside the routes folder.
+
+```js
+cd routes
+node -e "fs.mkdirSync('routes1')"
+node -e "fs.mkdirSync('routes2')"
+
+```
 
 ```js
 // 1 terminal window
