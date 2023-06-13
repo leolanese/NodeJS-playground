@@ -1,19 +1,24 @@
 <html>
   <head>
-    <title>My App</title>
+    <title>static3 index1</title>
     <script type="module" src="app.js"></script>
     <style>body { background: #bada55 }</style>
   </head>
   <body>
-      <h1>static 2 index</h1>
-    <nav><button id="fetch">Fetch Products</button></nav>
+    <nav>
+      <select id="category">
+        <option value="" hidden>Select Category</option>
+        <option value="electronics">Electronics</option>
+        <option value="confectionery">Confectionery</option>
+      </select>
+    </nav>
     <hr>
     <div id="products"></div>
     <template id="item">
       <style>
-        details { font-size: 1.5em; }
+        details { font-size: 1.55em; }
         summary { cursor: pointer; }
-        p { text-indent: 1.5rem; }
+        p { text-indent: 1.55rem; }
       </style>
        <details>
         <summary>

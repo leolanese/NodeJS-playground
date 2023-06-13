@@ -18,7 +18,7 @@ NodeJS is primarily used for non-blocking, event-driven servers, due to its sing
 
 ### Full-Stack-JavaScript
 
-0) 
+1) 
 ```js
 static/node app.js
 static/node app2.js
@@ -30,7 +30,7 @@ static/node app2.js
 
 ---
 
-1) Zero-Dependency Service Mock
+2) Zero-Dependency Service Mock
 
 Our project folder should now contain the following:
 
@@ -47,7 +47,7 @@ Now let's open two terminal windows, both with the current working directory set
 
 ```js
 // in the 1st terminal
-node-test/node server.js
+> node-test/node server.js
 
 [
     {id: '1', name: 'Leo Lanese', rrp: '1', info: 'Coding all day'},
@@ -70,4 +70,20 @@ node-test/serve -p 5050 static2
    │   Copied local address to clipboard!      │
    │                                           │
    └───────────────────────────────────────────┘
+```
+
+---
+
+## Mocking GET Routes
+
+```js
+// removing server.js
+node -e "fs.unlinkSync('server.js')"
+```
+
+
+```js
+// static3
+node -e "fs.mkdirSync('mock-server')"
+cd mock-server
 ```

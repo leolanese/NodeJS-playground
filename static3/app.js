@@ -1,13 +1,16 @@
-// static1
+// static3
 const API = 'http://localhost:3000'
 
-const populateProducts = async () => {
-  const products = document.querySelector('#products')
-  products.innerHTML = ''
-  const res = await fetch(API)
-  const data = await res.json()
+const populateProducts = async (category) => {
+  const products = document.querySelector('#products');
+  products.innerHTML = '';
+  console.log(`${API}/${category}`)
+  const res = await fetch(`${API}/${category}`);
+  const data = await res.json();
+
   for (const product of data) {
-    const item = document.createElement('product-item')
+    const item = document.createElement('product-item');
+    
     for (const key of ['name', 'rrp', 'info']) {
       const span = document.createElement('span')
       span.slot = key
@@ -17,9 +20,10 @@ const populateProducts = async () => {
     products.appendChild(item)
   }
 }
+const category = document.querySelector('#category')
 
-document.querySelector('#fetch').addEventListener('click', async () => {
-  await populateProducts()
+category.addEventListener('input', async ({ target }) => {
+  await populateProducts(target.value)
 })
 
 customElements.define('product-item', class Item extends HTMLElement {

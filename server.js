@@ -1,4 +1,5 @@
-'use strict'
+// not need it for example: static3
+// node -e "fs.unlinkSync('server.js')"
 const { createServer } = require('http')
 
 const data = JSON.stringify([

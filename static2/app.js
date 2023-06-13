@@ -1,3 +1,4 @@
+// static2
 const populateProducts = async () => {
     const products = document.querySelector('#products')
     products.innerHTML = ''
