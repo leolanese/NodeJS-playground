@@ -2,10 +2,15 @@
   <head>
     <title>static3 index1</title>
     <script type="module" src="app.js"></script>
-    <style>body { background: #bada55 }</style>
+    <style>
+      body { background: #bada55 }
+      #add { margin-top: 1em; width: 20rem; display: none; }
+      #add input { margin-bottom: .5em; }
+      #add button { font-weight: bold; width: 20em; float: left }</style>
   </head>
   <body>
-    
+
+    <!-- GET -->
     <nav>
       <select id="category" style="width: 10em; height: 5em;">
         <option value="" hidden>Select Option</option>
@@ -16,6 +21,14 @@
 
     <hr>
     <div id="products"></div>
+
+    <!-- POST -->
+    <form id="add">
+      <input name="name" placeholder="value" value="TestName" required>
+      <input name="info" placeholder="value" value="TestInfo" required>
+      <button type="submit">POST</button>
+    </form>
+
     <template id="item">
       <style>
         details { font-size: 1.55em; }
@@ -29,5 +42,6 @@
         <p><slot name="info"></slot></p>
       </details>
     </template>
+
   </body>
 </html>

@@ -173,3 +173,7 @@ node-test/static3/mock-server/npm run dev
     }
 [13:30:06.892] INFO (17231): request completed
 ```
+
+## Conclusion:
+
+The first GET is when we first selected "Option1" from the category selector. The OPTIONS request is triggered by the native fetch function before performing a POST request which happens directly after. The second GET request is after a page refresh and re-select of the "Option2" category.
