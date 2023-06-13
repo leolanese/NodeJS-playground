@@ -102,20 +102,35 @@ node -e "fs.mkdirSync('mock-server')"
 cd mock-server
 npm init fastify
 npm i
-npm i fastify-cors
+npm i @fastify/cors
 ```
 
-Finally, we'll create the two routes. To create a route we can create a folder with an `index.js` file inside the routes folder.
+Finally, we'll create the `two routes` (routes1, routes2). To create a route we can create a folder with an `index.js` file inside the routes folder.
 
 ```js
 cd routes
 node -e "fs.mkdirSync('routes1')"
 node -e "fs.mkdirSync('routes2')"
-
+cd ..
 ```
 
 ```js
-// 1 terminal window
+// 1 terminal
 node-test/static3/serve -p 5050
+
+   ┌───────────────────────────────────────────┐
+   │                                           │
+   │   Serving!                                │
+   │                                           │
+   │   - Local:    http://localhost:5050       │
+   │   - Network:  http://192.168.1.125:5050   │
+   │                                           │
+   │   Copied local address to clipboard!      │
+   │                                           │
+   └───────────────────────────────────────────┘
 ```
 
+```js
+// 2 terminal
+node-test/static3/mock-server/npm run dev
+```

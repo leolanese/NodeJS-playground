@@ -8,17 +8,23 @@ const populateProducts = async (category) => {
   const res = await fetch(`${API}/${category}`);
   const data = await res.json();
 
-  for (const product of data) {
+  function createProductItem(product) {
     const item = document.createElement('product-item');
-    
-    for (const key of ['name', 'rrp', 'info']) {
-      const span = document.createElement('span')
-      span.slot = key
-      span.textContent = product[key]
-      item.appendChild(span)
-    }
-    products.appendChild(item)
+  
+    ['name', 'rrp', 'info'].forEach(key => {
+      const span = document.createElement('span');
+      span.slot = key;
+      span.textContent = product[key];
+      item.appendChild(span);
+    });
+  
+    return item;
   }
+  
+  data.forEach(product => {
+    const item = createProductItem(product);
+    products.appendChild(item);
+  });
 }
 const category = document.querySelector('#category')
 
