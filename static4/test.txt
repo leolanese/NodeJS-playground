@@ -1,0 +1,4 @@
+Line 1\r\n
+Line 2\r
+Line 3\n
+Line 4

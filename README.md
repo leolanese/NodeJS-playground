@@ -1,8 +1,18 @@
 # NodeJS Playground
 
->  "JavaScript everywhere" paradigm, unifying web-application development around a single programming language, as opposed to using different languages for the server versus client-side programming.
+> `"JS everywhere" paradigm`, unifying web-application development around a single programming language, as opposed to using different languages for the server versus client-side programming.
 
->  As a NodeJS developer, we're working with an event-driven, non-blocking I/O model, as the multithreading is abstracted away by libuv.
+> As a NodeJS developer, we're working with an event-driven, non-blocking I/O model, as the multithreading is abstracted away by libuv.
+
+## What is NodeJS
+
+> NodeJS is a `event-driven` `runtime` that provides a `single-threaded non-blocking asynchronous I/O model`
+
+- `event-driven`: The flow is determninated by events
+
+- `runtime`: (environment) where to run JS: browser, server, terminal, etc
+
+- `single-threaded non-blocking asynchronous I/O model`: Node is single-thread but JS execution do NOT stop/block while waiting for I/O operation to complete. Allow us to handle tasks concurrently. NodeJS uses `LibUV` under the hood that provides `non-blocking I/O`, which indeed uses a `thread pool to perform asynchronous I/O operations`. This is a key aspect of the non-blocking I/O model in NodeJS
 
 ## NodeJS uses
 
